@@ -1,12 +1,11 @@
 #  dados-SPFC
 # ⚽ SPFC Moneyball: Análise de Eficiência Financeira e Esportiva (2006-2024)
 
-👨‍💻 Autor
-Desenvolvido por [Seu Nome]
+👨‍💻 Desenvolvido por:
+## João Otávio Mochiuti
 
 [LinkedIn](www.linkedin.com/in/joao-otavio-mochiuti)
 
-[Portfólio](Seu Link)
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-green)
