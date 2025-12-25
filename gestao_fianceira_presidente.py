@@ -58,11 +58,7 @@ try:
     print(f"Nomes das colunas: {list(df.columns)}")
 
     # 2. SELEÇÃO CIRÚRGICA (A CORREÇÃO ESTÁ AQUI)
-    # Pegamos a coluna 0 (Texto), a coluna 1 (Valor) e a ÚLTIMA coluna (Ano)
-    # O -1 em Python significa "o último item da lista"
     df = df.iloc[:, [0, 1, -1]]
-    
-    # Agora sim renomeamos, pois garantimos que só temos 3 colunas na mão
     df.columns = ['Tipo_Movimentacao', 'Valor_Texto', 'Ano']
 
     # 3. Aplicar as limpezas
@@ -73,7 +69,6 @@ try:
     df['Gestao'] = df['Ano'].apply(definir_presidente)
     
     # 4. Filtragem Final
-    # Filtramos para garantir que só temos linhas relevantes
     filtro_validos = df['Tipo_Movimentacao'].astype(str).str.contains('Receita|Despesa|Balanço|Entrada|Saída', case=False, na=False)
     df_final = df[filtro_validos].copy()
 

@@ -6,7 +6,7 @@ from io import StringIO
 
 # --- CONFIGURAÇÃO ---
 ANO_INICIAL = 2006
-ANO_FINAL = 2026 # Pode colocar 2025 ou 2026 para garantir
+ANO_FINAL = 2026
 URL_BASE = "https://www.transfermarkt.com.br/sao-paulo-fc/transfers/verein/585/plus/?saison_id={}"
 
 HEADERS = {
@@ -28,7 +28,6 @@ for ano in range(ANO_INICIAL, ANO_FINAL + 1):
             soup = BeautifulSoup(response.text, 'html.parser')
             
             # Estratégia: Procurar o H2 que tem o texto "Balanço de transferências"
-            # O site costuma usar "Balanço de transferências" ou "Balanço atual"
             titulos = soup.find_all("h2", class_="content-box-headline")
             
             tabela_encontrada = False
@@ -37,8 +36,6 @@ for ano in range(ANO_INICIAL, ANO_FINAL + 1):
                 texto_titulo = h2.get_text(strip=True)
                 
                 if "Balanço" in texto_titulo:
-                    # Achou o título! A tabela costuma estar no mesmo box, logo depois.
-                    # Vamos subir para o pai (box) e procurar a tabela lá dentro
                     box_pai = h2.find_parent("div", class_="box")
                     
                     if box_pai:

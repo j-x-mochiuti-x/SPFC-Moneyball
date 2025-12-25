@@ -15,14 +15,11 @@ def limpar_valor_milhoes(valor_str):
     fator = 1.0
     
     # Lógica: O objetivo é transformar tudo em MILHÕES
-    # Verifica 'mi' (pode vir como 'mi.' ou só 'mi')
     if 'mi' in s:
         fator = 1.0 
-        # Remove tanto 'mi.' quanto 'mi' solto para garantir
         s = s.replace('mi.', '').replace('mi', '')
         
     elif 'mil' in s:
-        # Se é milhar (ex: 500 mil), dividimos por 1000 para virar milhão (0.5)
         fator = 0.001
         s = s.replace('mil', '')
     
@@ -30,8 +27,6 @@ def limpar_valor_milhoes(valor_str):
     s = s.replace('balanced', '').strip()
     
     # --- O PULO DO GATO (CORREÇÃO DO ERRO DE ESCALA) ---
-    # Só removemos o ponto se houver vírgula na string (formato 1.000,00)
-    # Se NÃO houver vírgula, assumimos que o ponto é decimal (formato 14.98) e mantemos ele.
     if ',' in s:
         s = s.replace('.', '')  # Remove ponto de milhar
         s = s.replace(',', '.') # Transforma vírgula em ponto decimal

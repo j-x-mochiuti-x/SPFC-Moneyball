@@ -29,7 +29,7 @@ despesa_por_gestao.columns = ['Gestao', 'Total_Despesa']
 # Junta tudo num dataframe resumo
 resumo_financeiro = pd.merge(receita_por_gestao, despesa_por_gestao, on='Gestao', how='outer').fillna(0)
 
-# Cria coluna de Saldo (Opcional, mas útil)
+# Cria coluna de Saldo
 resumo_financeiro['Saldo_Bruto'] = resumo_financeiro['Total_Receita'] - resumo_financeiro['Total_Despesa']
 
 # Ordena por ano aproximado (manualmente para ficar cronológico no gráfico)

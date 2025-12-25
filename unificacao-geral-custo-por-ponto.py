@@ -49,7 +49,7 @@ try:
     })
 
     # ---------------------------------------------------------
-    # 4. CÁLCULOS ESPORTIVOS (Igual ao anterior)
+    # 4. CÁLCULOS ESPORTIVOS
     # ---------------------------------------------------------
     df_jogos['Vitoria_Num'] = df_jogos['Status_Jogo'].apply(lambda x: 1 if x == 'Vitória' else 0)
     df_jogos['Empate_Num'] = df_jogos['Status_Jogo'].apply(lambda x: 1 if x == 'Empate' else 0)
@@ -67,7 +67,7 @@ try:
     kpi_esportivo['Aproveitamento_Pct'] = (kpi_esportivo['Pontos_Ganhos'] / (kpi_esportivo['Jogos_Totais'] * 3)) * 100
 
     # ---------------------------------------------------------
-    # 5. CÁLCULOS FINANCEIROS (AGORA USANDO VALOR CORRIGIDO)
+    # 5. CÁLCULOS FINANCEIROS
     # ---------------------------------------------------------
     df_fin_receita = df_fin[df_fin['Tipo'].str.contains('Receita', case=False)]
     df_fin_despesa = df_fin[df_fin['Tipo'].str.contains('Despesa|Saída', case=False)]

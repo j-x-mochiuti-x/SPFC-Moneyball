@@ -1,7 +1,7 @@
 import pandas as pd
 
 # --- CONFIGURAÇÃO MANUAL ---
-# Use o arquivo que saiu do passo anterior (o _FINAL)
+# Use o arquivo que saiu do passo anterior ( _FINAL)
 ARQUIVO_ENTRADA = "SPFC_Jogos_Julio_Casares__2021-Presente__FINAL.csv"
 # ---------------------------
 

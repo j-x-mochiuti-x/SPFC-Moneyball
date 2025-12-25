@@ -21,7 +21,7 @@ lista_dfs = []
 print("--- INICIANDO EXTRAÇÃO BRUTA (RAW DATA) ---\n")
 
 for mandato in mandatos:
-    # A URL exata que você descobriu
+    # A URL 
     url = f"https://www.transfermarkt.com.br/sao-paulo-fc/spielplandatum/verein/585/plus/1?saison_id=2024&wettbewerb_id=&day=&heim_gast=&punkte=&datum_von={mandato['inicio']}&datum_bis={mandato['fim']}"
     
     print(f"Extraindo: {mandato['Presidente']}...")

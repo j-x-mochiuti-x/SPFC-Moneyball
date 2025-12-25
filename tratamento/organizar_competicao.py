@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 
 # --- CONFIGURAÇÃO MANUAL ---
-# Edite aqui o nome do arquivo que você quer processar
 ARQUIVO_ALVO = "SPFC_Jogos_Julio_Casares__2021-Presente__tratado.csv"
 # ---------------------------
 

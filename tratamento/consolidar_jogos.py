@@ -4,7 +4,7 @@ import os
 
 # --- CONFIGURAÇÃO ---
 # O código vai procurar qualquer arquivo que termine com "FINAL.csv" na pasta
-# Certifique-se de que os 4 arquivos dos presidentes estão na pasta com esse sufixo.
+# Certifique-se de que os 4 arquivos dos presidentes estão na pasta com esse sufixo!!!!
 PADRAO_ARQUIVOS = "*_FINAL.csv" 
 ARQUIVO_SAIDA = "SPFC_JOGOS_COMPLETOS_CONSOLIDADO.csv"
 

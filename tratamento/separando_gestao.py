@@ -13,7 +13,6 @@ try:
     df = pd.read_csv(arquivo_origem, sep=';', encoding='utf-8-sig')
     
     # 2. Identificar a coluna que tem o nome do Presidente
-    # No código anterior chamamos de 'REF_GESTAO'. O Pandas deve ter mantido esse nome.
     coluna_filtro = 'REF_GESTAO'
     
     if coluna_filtro not in df.columns:
@@ -32,7 +31,6 @@ try:
             df_presidente = df[df[coluna_filtro] == presidente]
             
             # Limpeza do nome do arquivo (para não ter parenteses ou espaços no nome do arquivo)
-            # Ex: "Juvenal Juvêncio (2006-2014)" vira "Juvenal_Juvêncio_2006-2014"
             nome_limpo = re.sub(r'[^\w\-]', '_', presidente) 
             nome_arquivo_final = f"SPFC_Jogos_{nome_limpo}.csv"
             
