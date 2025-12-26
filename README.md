@@ -58,13 +58,18 @@ Matriz de correlação de Pearson para validar estatisticamente se gastar mais p
 **Descobertas:**
 * A correlação entre **Gasto por Jogo** e **% de Vitórias** indicou  -0.25 uma correlação negativa fraca. Estatisticamente, isso demonstra que aumentar o investimento financeiro por jogo não resultou em mais vitórias no período analisado. Pelo contrário, houve momentos de alto gasto e baixo retorno. Isso refuta a hipótese de que "o time perdeu porque faltou investimento" e fortalece a tese de ineficiência na alocação de recursos. Gestão técnica pesou mais que o volume financeiro (Correlação não implica causalidade, mas aponta uma tendência clara de desperdício)
 
-### 3. Impacto Estatístico por Era (Variáveis Dummy)
+### 4. Impacto Estatístico por Era (Variáveis Dummy)
 
 Utilização de One-Hot Encoding para medir o impacto de cada gestão nas vitórias, tendo a "Era de Ouro" (Juvenal Juvêncio) como baseline.
 
 ![alt text](image.png)
 
 * **Efeito Gestão:** Ao isolar as gestões via variáveis dummy, quantificamos que o "fator político/técnico" pesou mais nos resultados do que o volume financeiro disponível.
+
+🚨 * **O Alerta da Estagnação (Gestão Casares):** Embora a narrativa atual seja de "reconstrução", os dados apontam uma realidade de estagnação esportiva relativa.
+* Barra Vermelha (Coeficiente Negativo): O gráfico revela que a gestão Casares mantém uma correlação negativa com a probabilidade de vitória quando comparada ao Baseline histórico.
+* Interpretação: Estatisticamente, o time atual ainda joga "abaixo da régua" estabelecida na década de 2000. Embora tenha reduzido a ineficiência brutal da era Leco, a gestão atual não conseguiu cruzar a fronteira para o impacto positivo (barra verde).
+* Risco de Mediocridade: Cruzando com os dados financeiros, vemos um "Custo por Ponto" baixo. Porém, associado a um impacto de vitória negativo, isso indica um risco de o clube estar se acomodando em ser "barato e competitivo apenas para meio de tabela", longe da dominância que o torcedor (e o baseline de Juvenal) exige.
 ---
 
 ## 🛠️ Stack Tecnológico e Metodologia
